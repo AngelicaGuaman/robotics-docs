@@ -27,7 +27,7 @@ La imagen se divide en **tres regiones horizontales (ROIs)**:
 
 - **Top ROI** → anticipa la trayectoria futura. (Franja azul)
 - **Mid ROI** → representa la trayectoria inmediata. (Franja amarilla)
-- **Bottom ROI** → representa la posición actual del robot respecto a la línea. (Franja verde)
+- **Bottom ROI** → representa la posición actual del coche respecto a la línea. (Franja verde)
 
 Cada ROI permite calcular el **centroide del mayor contorno detectado** mediante:
 
@@ -44,8 +44,7 @@ A continuación, se muestra la imagen segmentada y dividida en las 3 regiones qu
 
 ![Segmentación de línea roja](recursos/imagen_divida_simple.png)
 
-A pesar que se ha divido la imagen en 3 partes, según se iba mejorando el sistema, la sección de top no se usa porque el coche de F1 no percibe línea en esa franja. Esto es buena señal a la hora de hacer el seguimiento.
-
+A pesar que se ha divido la imagen en 3 partes, según se iba mejorando el sistema, la sección de top no se usa porque el coche de F1 no percibe línea (no hay) en esa franja. Esto es buena señal a la hora de hacer el seguimiento; ya que no hay cambios muy bruscos llegando a perder la línea.
 
 ---
 
@@ -62,7 +61,7 @@ El cambio de estado se controla mediante los siguientes umbrales:
 - **`CURVE_ON_TH`** → umbral a partir del cual el sistema entra en **modo curva**.
 - **`CURVE_OFF_TH`** → umbral por debajo del cual el sistema vuelve a **modo recta**.
 
-Esto me ayudó a reducir las oscilaciones entre ambos estados cuando, proporcionando un comportamiento más estable del controlador.
+Esto me ayudó a reducir las oscilaciones entre ambos estados, proporcionando un comportamiento más estable del controlador.
 
 ---
 
@@ -103,7 +102,7 @@ El controlador utiliza dos componentes principales:
 - **Término proporcional (Kp)**
 - **Término derivativo (Kd)**
 
-Para adaptar el comportamiento del coche a diferentes situaciones de conducción, se definen **dos conjuntos de ganancias**, uno para **rectas** y otro para **curvas**.
+Para adaptar el comportamiento del coche a diferentes situaciones de conducción, se definen **dos parejas de ganancias**, uno para **rectas** y otro para **curvas**.
 
 Además, el cálculo de la velocidad se realiza teniendo en cuenta la **velocidad anterior del vehículo** y el **estado anterior**, lo que permite evitar cambios bruscos de aceleración o frenado y conseguir transiciones más suaves durante el seguimiento del circuito.
 
@@ -166,8 +165,8 @@ A continuación se muestra un **video ilustrativo** del funcionamiento del siste
 
 Durante el desarrollo de esta práctica tuve varios desafíos tanto a nivel técnico como experimental.
 
-Uno de los principales problemas fue la **dificultad para medir con precisión el tiempo real que tardaba el F1 en completar el circuito**. Debido a la ausencia de una GPU dedicada y a la dependencia de la conexión a internet para ejecutar el simulador, en ocasiones el rendimiento variaba. Esto provocaba que algunas ejecuciones fueran más lentas, lo que inicialmente me generaba confusión al evaluar el rendimiento del algoritmo, ya que parecía que ciertos cambios empeoraban el comportamiento del sistema cuando en realidad se trataba de variaciones en el tiempo de ejecución.
+Uno de los principales problemas fue la **dificultad para medir con precisión el tiempo real que tarda el F1 en completar el circuito**. Debido a la ausencia de una GPU dedicada y a la dependencia de la conexión a internet para ejecutar el simulador, en ocasiones el rendimiento variaba. Esto provocaba que algunas ejecuciones fueran más lentas, lo que inicialmente me generaba confusión al evaluar el rendimiento del algoritmo, ya que parecía que ciertos cambios empeoraban el comportamiento del sistema cuando en realidad se trataba de variaciones en el tiempo de ejecución.
 
 Otro aspecto importante fue el **diseño del mecanismo de recuperación de la línea**. Implementar una estrategia que permitiera al vehículo recuperar la trayectoria cuando la línea dejaba de detectarse resultó fundamental para mejorar la robustez del sistema.
 
-Finalmente, el **ajuste de los parámetros del controlador** requirió un proceso iterativo basado en experimentación. Pequeñas variaciones en las ganancias del controlador (`Kp` y `Kd`) podían alterar significativamente el comportamiento del vehículo, llegando incluso a provocar que el sistema dejara de funcionar correctamente. Por esta razón, el proceso de ajuste se realizó mediante múltiples pruebas hasta encontrar un equilibrio adecuado entre estabilidad, capacidad de respuesta y velocidad de recorrido del circuito.
+Finalmente, el **ajuste de los parámetros del controlador** requirió un proceso iterativo basado en experimentación. Pequeñas variaciones en las ganancias del controlador (`Kp` y `Kd`) podían alterar significativamente el comportamiento del vehículo, llegando incluso a provocar que el sistema vaya muy lento o tenga más oscilaciones. Por esta razón, el proceso de ajuste se realizó mediante múltiples pruebas hasta encontrar un equilibrio adecuado entre estabilidad, capacidad de respuesta y velocidad de recorrido del circuito.
