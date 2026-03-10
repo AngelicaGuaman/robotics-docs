@@ -112,16 +112,18 @@ Control más agresivo para mantener estabilidad:
 
 ![Segmentación de línea roja circuito simple](recursos/imagen_divida_simple.png)
 
-![Demo circuito simple](recursos/circuito_simple.mp4)
+A continuación se muestra un video demostrativo del funcionamiento del sistema:
 
-<video src="recursos/circuito_simple.mp4</video>
+[![Demo circuito simple](https://img.youtube.com/vi/BMsKdHyreCo/0.jpg)](https://youtu.be/BMsKdHyreCo)
 
 
 ## Circuito Montmelo
 
 ![Segmentación de línea roja circuito Montmelo](recursos/imagen_divida_montmelo.png)
 
+A continuación se muestra un video demostrativo del funcionamiento del sistema:
 
-![Demo circuito Montmelo](recursos/circuito_montmelo.mp4)
+[![Demo circuito Montmelo](https://img.youtube.com/vi/qJKz3H181Ec/0.jpg)](https://youtu.be/qJKz3H181Ec)
+
 
 
