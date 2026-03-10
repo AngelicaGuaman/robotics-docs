@@ -164,7 +164,7 @@ A continuación se muestra un **video ilustrativo** del funcionamiento del siste
 
 # Conclusiones
 
-Durante el desarrollo de este proyecto se presentaron varios desafíos tanto a nivel técnico como experimental.
+Durante el desarrollo de esta práctica tuve varios desafíos tanto a nivel técnico como experimental.
 
 Uno de los principales problemas fue la **dificultad para medir con precisión el tiempo real que tardaba el F1 en completar el circuito**. Debido a la ausencia de una GPU dedicada y a la dependencia de la conexión a internet para ejecutar el simulador, en ocasiones el rendimiento variaba. Esto provocaba que algunas ejecuciones fueran más lentas, lo que inicialmente me generaba confusión al evaluar el rendimiento del algoritmo, ya que parecía que ciertos cambios empeoraban el comportamiento del sistema cuando en realidad se trataba de variaciones en el tiempo de ejecución.
 
