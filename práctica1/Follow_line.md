@@ -1,4 +1,4 @@
-# Práctica 1 - Flow line
+# Práctica 1 - Follow line
 
 En esta práctica he desarrollado un **sistema de control PD** para permitir que un coche de F1 siga una línea roja en el suelo utilizando visión artificial.
 La cámara del vehículo se encuentra ligeramente desplazada hacia la derecha, por lo que el sistema compesará ese desfase al calcular el error.
