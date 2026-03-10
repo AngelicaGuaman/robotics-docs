@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: robotics-backend
+  labels:
+    app: robotics-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: robotics-backend
+  template:
+    metadata:
+      labels:
+        app: robotics-backend
+    spec:
+      containers:
+      - name: robotics-backend
+        image: jderobot/robotics-backend:latest
+        ports:
+        - containerPort: 6080
+        - containerPort: 7163
+        # Si necesitas todo el rango 6080-6090:
+        - containerPort: 6081
+        - containerPort: 6082
+        - containerPort: 6083
+        - containerPort: 6084
+        - containerPort: 6085
+        - containerPort: 6086
+        - containerPort: 6087
+        - containerPort: 6088
+        - containerPort: 6089
+        - containerPort: 6090
+
+
