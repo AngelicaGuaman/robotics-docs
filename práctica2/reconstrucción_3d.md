@@ -1,4 +1,4 @@
-# Práctica 2 - Reconstrucción 3D con visión estéreo
+# Práctica 2 - Reconstrucción 3D
 
 En esta práctica he implementado un algoritmo de reconstrucción 3D a partir de un sistema de cámaras estéreo (izquierda y derecha).
 
