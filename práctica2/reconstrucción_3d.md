@@ -61,17 +61,18 @@ Se busca el punto homólogo en la imagen derecha:
 
 Una vez encontrada la correspondencia:
 
-- Se utilizan rectas de retroproyección.
-- Se obtienen dos rectas 3D (una por cada cámara)
-- Se estima el punto 3D más corto entre ambas rectas
+- Se obtienen rectas de retroproyección.
+- Se calcula el punto 3D más cercano entre ambas rectas
 
-🔹 Nota: debido a ruido y errores, las rectas no se intersectan exactamente.
+🔹 Nota: debido a ruido y errores, las rectas no se intersectan exactamente por eso se usa el más cercano.
 
 
 ![Reconstrucción 3D](recursos/reconstrucción_3d.png)
 
 
 ## Demo
+
+A continuación, se muestran unos **vídeos** con los resultados obtenidos.
 
 [![Demo sin matching](https://img.youtube.com/vi/LX0HyjP5Lso/0.jpg)](https://youtu.be/LX0HyjP5Lso)
 
