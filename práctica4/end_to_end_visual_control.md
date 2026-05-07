@@ -254,7 +254,7 @@ A continuación, se muestran unos **vídeos** con los resultados obtenidos.
 
 [![Demo circuito Montmelo](https://img.youtube.com/vi/4T4MpVCOmjg/0.jpg)](https://youtu.be/4T4MpVCOmjg)
 
-No obstante, también se observó un caso en el que el sistema no consigue recuperarse correctamente tras desviarse excesivamente de la línea.
+No obstante, también se observó un caso en el que el sistema no consigue recuperarse correctamente tras desviarse excesivamente de la línea. Se marca con un círculo azul donde el F1 tuvo el problema en recuperarse.
 
 Este comportamiento indica que el modelo presenta dificultades en situaciones de recuperación, probablemente debido a la falta de ejemplos similares dentro del dataset de entrenamiento. En consecuencia, la red neuronal no ha aprendido correctamente cómo actuar ante este tipo de escenarios poco frecuentes.
 
