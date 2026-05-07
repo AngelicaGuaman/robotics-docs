@@ -53,7 +53,7 @@ Además, este recorte permite:
 
 El circuito utiliza una línea roja como referencia principal de navegación. Por ello, se aplicó un filtro HSV para detectar únicamente los píxeles rojos de la imagen.
 
-Este enfoque también lo utilizamos en la [**Práctica 1: Visual Follow Line**](./práctica1/Follow_line.md) aunque este caso el resultado del filtrado se emplea para la entrada de la red neuronal.
+Este enfoque también lo utilizamos en la [**Práctica 1: Visual Follow Line**](../práctica1/Follow_line.md) aunque este caso el resultado del filtrado se emplea para la entrada de la red neuronal.
 
 A continuación, se enumeran las ventajas de aplicar este filtro:
 
@@ -229,10 +229,10 @@ Estos resultados muestran que el sistema es suficientemente rápido para funcion
 
 Una vez finalizado el entrenamiento, se subió el modelo ONNX a Unibotics para realizar evaluar el modelo.
 
-Para que el sistema funcione correctamente fue fundamental aplicar el mismo preprocesamiento utilizado durante el entrenamiento de la red. En el apartado 1 se detallan las operaciones realizadas.
+Para que el sistema funcione correctamente fue fundamental aplicar el mismo preprocesamiento utilizado durante el entrenamiento de la red. En el [apartado 1](#1-preprocesamiento-de-la-imagen) se detallan las operaciones realizadas.
 
 ### 5. Demo con los resultados obtenidos
-Esta práctica fue una mejora de la [**Práctica 1: Visual Follow Line**](./práctica1/Follow_line.md) utilizando redes neuronales.
+Esta práctica fue una mejora de la [**Práctica 1: Visual Follow Line**](../práctica1/Follow_line.md) utilizando redes neuronales.
 
 Los resultados obtenidos muestran una mejora significativa en el comportamiento del F1 durante la conducción. En comparación con la práctica anterior, el sistema desarrollado presenta:
 
