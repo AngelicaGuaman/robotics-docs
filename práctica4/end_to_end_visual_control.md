@@ -227,7 +227,7 @@ Estos resultados muestran que el sistema es suficientemente rápido para funcion
 
 ### 4. Integración con Unibotics
 
-Una vez finalizado el entrenamiento, se subió el modelo ONNX a Unibotics para realizar evaluar el modelo.
+Una vez finalizado el entrenamiento, se subió el modelo en formato ONNX a Unibotics para realizar evaluar el modelo.
 
 Para que el sistema funcione correctamente fue fundamental aplicar el mismo preprocesamiento utilizado durante el entrenamiento de la red. En el [apartado 1](#1-preprocesamiento-de-la-imagen) se detallan las operaciones realizadas.
 
