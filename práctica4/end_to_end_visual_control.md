@@ -156,6 +156,7 @@ Posteriormente, dicho modelo se recupera para realizar la evaluación final y la
 
 
 **Exportación a ONNX**
+
 Finalmente, el modelo entrenado se exportó al formato ONNX. Este fichero se importará en Unibotic para validar la inferencia en tiempo real en los diferentes circuitos.
 
 
