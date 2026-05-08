@@ -28,7 +28,7 @@ A continuación, se muestra el resultado obtenido después del preprocesamiento 
 
 ![Resultado del preprocesamiento](recursos/preprocesamiento.png)
 
-Esto me permitió observar que se podía recortar, un poco más, la imagen:
+Esto me permitió observar que se podía recortar un poco más la imagen:
 
 ![Resultado del preprocesamiento](recursos/preprocesamiento_2.png)
 
@@ -107,13 +107,13 @@ En caso de que el dataset no hubiese estado balanceado, habría sido necesario a
 
 #### 2.2 Arquitectura de la red neuronal
 
-Para resolver el problema de conducción autónoma se utilizó una arquitectura basada en **PilotNet**, una red neuronal convolucional desarrollada originalmente por NVIDIA para tareas de conducción autónoma extremo a extremo.
+Para resolver el problema de conducción autónoma se utilizó una arquitectura basada en **PilotNet**, una red neuronal convolucional desarrollada originalmente por NVIDIA para tareas de conducción autónoma extremo a extremo (*end-to-end*).
 
-La salida final de la red está compuesta por dos valores:
+La red recibe imágenes preprocesadas como entrada y predice directamente las velocidades lineal (`v`) y angular (`w`) del vehículo.
 
-```
-[v, w]
-```
+A continuación, se muestra la arquitectura implementada:
+
+![Arquitectura PilotNet](recursos/Arquitectura_PilotNet.png)
 
 **Función de pérdida**
 
